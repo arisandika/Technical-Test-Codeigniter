@@ -1,68 +1,79 @@
-# CodeIgniter 4 Application Starter
+# Technical Test Submission - BRICK Intern [Nama Lengkap Anda]
 
-## What is CodeIgniter?
+## Deskripsi Proyek
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Proyek ini merupakan hasil pengerjaan dari *Study Case Test* untuk posisi Intern di **BRICK (Bocorocco Riset Inovasi Core & Kontrol)** dengan nomor referensi `BRICK/2023/INTERN/D2D3`.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Proyek ini dibangun menggunakan **CodeIgniter 4 dan Tailwind 4**, sebuah pilihan yang diambil untuk memanfaatkan fitur-fitur modern, arsitektur yang solid, dan implementasi OOP yang kuat, sejalan dengan prinsip-prinsip yang ditekankan dalam soal. Styling diimplementasikan menggunakan **Tailwind CSS** untuk menghasilkan desain yang rapi dan responsif.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Halaman yang Telah Diimplementasikan
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Berikut adalah daftar 7 halaman yang telah berhasil di-*slicing* dari desain Figma, beserta route untuk mengaksesnya:
 
-## Installation & updates
+1.  **Halaman Home/List Product**
+    -   Route: `https://technicaltest.arihub.my.id/`
+2.  **Halaman Detail Produk**
+    -   Route: `https://technicaltest.arihub.my.id/product/detail`
+3.  **Halaman Search**
+    -   Route: `https://technicaltest.arihub.my.id/search`
+4.  **Halaman Checkout**
+    -   Route: `https://technicaltest.arihub.my.id/checkout`
+5.  **Halaman Edit Profile**
+    -   Route: `https://technicaltest.arihub.my.id/profile/edit`
+6.  **Halaman Edit Password**
+    -   Route: `https://technicaltest.arihub.my.id/profile/password`
+7.  **Halaman Edit Ahli Waris**
+    -   Route: `https://technicaltest.arihub.my.id/profile/ahli-waris`
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+## Panduan Instalasi dan Menjalankan Proyek
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+Untuk menjalankan proyek ini di lingkungan lokal, silakan ikuti langkah-langkah berikut:
 
-## Setup
+1.  **Clone Repository**
+    ```bash
+    git clone [Link ke Repository Anda]
+    cd [nama-folder-proyek]
+    ```
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+2.  **Install Dependencies**
+    Pastikan Anda memiliki [Composer](https://getcomposer.org/). Jalankan perintah berikut di root proyek:
+    ```bash
+    composer install
+    ```
 
-## Important Change with index.php
+3.  **Setup Environment**
+    Salin file `env` menjadi `.env`. File ini berisi konfigurasi dasar untuk proyek.
+    ```bash
+    cp env .env
+    ```
+    Buka file `.env` dan pastikan `app.baseURL` sudah sesuai (biasanya `http://localhost:8080/`).
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+4.  **Jalankan Server Development**
+    Gunakan server development bawaan CodeIgniter 4:
+    ```bash
+    php spark serve
+    ```
+    Proyek akan berjalan dan dapat diakses melalui `http://localhost:8080`.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+---
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### Soal 3: Query Database MySQL
 
-## Repository Management
+**Tercapai.** Berikut adalah query MySQL untuk menampilkan nama kota dan jumlah penduduk dari semua kota di Indonesia dengan populasi lebih dari 5 juta, diurutkan dari yang terbesar.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+```sql
+SELECT 
+    NAME, 
+    POPULATION 
+FROM 
+    city 
+WHERE 
+    COUNTRYCODE = 'INA' 
+    AND POPULATION > 5000000 
+ORDER BY 
+    POPULATION DESC;
+```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+---
 
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+Terima kasih atas kesempatan yang telah diberikan untuk mengerjakan *technical test* ini.
