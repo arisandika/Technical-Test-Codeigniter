@@ -1,8 +1,8 @@
-# Technical Test Submission - BRICK Intern [Nama Lengkap Anda]
+# Technical Test Submission - BRICK Ari Sandika
 
 ## Deskripsi Proyek
 
-Proyek ini merupakan hasil pengerjaan dari *Study Case Test* untuk posisi Intern di **BRICK (Bocorocco Riset Inovasi Core & Kontrol)** dengan nomor referensi `BRICK/2023/INTERN/D2D3`.
+Proyek ini merupakan hasil pengerjaan dari *Study Case Test* untuk posisi Intern di **Bocorocco**.
 
 Proyek ini dibangun menggunakan **CodeIgniter 4 dan Tailwind 4**, sebuah pilihan yang diambil untuk memanfaatkan fitur-fitur modern, arsitektur yang solid, dan implementasi OOP yang kuat, sejalan dengan prinsip-prinsip yang ditekankan dalam soal. Styling diimplementasikan menggunakan **Tailwind CSS** untuk menghasilkan desain yang rapi dan responsif.
 
@@ -31,8 +31,8 @@ Untuk menjalankan proyek ini di lingkungan lokal, silakan ikuti langkah-langkah 
 
 1.  **Clone Repository**
     ```bash
-    git clone [Link ke Repository Anda]
-    cd [nama-folder-proyek]
+    git clone https://github.com/arisandika/arisandika-Technical-Test-Codeigniter.git
+    cd TECH-TEST
     ```
 
 2.  **Install Dependencies**
