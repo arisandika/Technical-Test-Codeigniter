@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Kaos Polos Hitam",
+    "sku": "TSH-001",
+    "price": 75000,
+    "stock": 120,
+    "category": "Pakaian",
+    "image": "tshirt.png",
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "name": "Celana Jeans Slim Fit",
+    "sku": "JEANS-002",
+    "price": 199000,
+    "stock": 45,
+    "category": "Pakaian",
+    "image": "detail_shoes.png",
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "name": "Sepatu Sneakers Putih",
+    "sku": "SHOE-003",
+    "price": 250000,
+    "stock": 0,
+    "category": "Sepatu",
+    "image": "starter_pack.png",
+    "status": "inactive"
+  }
+]
