@@ -31,7 +31,7 @@ Untuk menjalankan proyek ini di lingkungan lokal, silakan ikuti langkah-langkah 
 
 1.  **Clone Repository**
     ```bash
-    git clone https://github.com/arisandika/arisandika-Technical-Test-Codeigniter.git
+    git clone https://github.com/arisandika/Technical-Test-Codeigniter.git
     cd TECH-TEST
     ```
 
